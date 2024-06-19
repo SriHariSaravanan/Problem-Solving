@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int num=153;
+        int l=Integer.toString(num).length();
+        int temp=num;
+        int count=0;
+        while(temp>0){
+            int digit=temp%10;
+            count+=Math.pow(digit,l);
+            temp/=10;
+        }
+        if(count==num){
+            System.out.println("Yes");
+        }else{
+            System.out.print("No");
+        }
+    }
+}
