@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int x=121;
+        if(x<0||x!=0&&x%10==0){
+            System.out.println(false);
+        }
+        int reverse=0;
+        int temp=x;
+        while(x>0){
+            int digits=x%10;
+            reverse=reverse*10+digits;
+            x/=10;
+        }
+        if(reverse==temp){
+            System.out.println("Yes");
+        }else{
+            System.out.print("No");
+        }
+    }
+}
