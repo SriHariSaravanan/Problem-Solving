@@ -1,0 +1,17 @@
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int l=nums.length;
+        int index=0;
+        for(int i=0;i<l;i++){
+            if(nums[i]!=0){
+                nums[index]=nums[i];
+                index++;
+            }
+        }
+        while(index<l){
+            nums[index]=0;
+            index++;
+        }
+        System.out.print(Arrays.toString(nums));
+    }
+}
